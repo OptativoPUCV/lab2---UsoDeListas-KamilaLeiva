@@ -60,3 +60,13 @@ exercises.c:64:25: error: implicit declaration of function ‘length’ [-Werror
 cc1: all warnings being treated as errors
 Compilation failed
 7af81e3
+Wed 20 Mar 2024 08:33:36 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:60:24: error: invalid use of incomplete typedef ‘List’
+   60 |   int largo = get_size(*L);
+      |                        ^~
+Compilation failed
+19749ac
