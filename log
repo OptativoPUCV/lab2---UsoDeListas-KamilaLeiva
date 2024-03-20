@@ -49,3 +49,14 @@ Wed 20 Mar 2024 08:28:42 PM UTC:
  tests:  1|4
 total_score: 10/70
 badb218
+Wed 20 Mar 2024 08:30:35 PM UTC: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:64:25: error: implicit declaration of function ‘length’ [-Werror=implicit-function-declaration]
+   64 |     for(int i = 0 ; i < length(L); i++)
+      |                         ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7af81e3
