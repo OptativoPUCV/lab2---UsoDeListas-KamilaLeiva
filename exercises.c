@@ -62,7 +62,7 @@ int sumaLista(List *L) {
   dato = (int*)first(L);
   while(dato != NULL)
     for(int i = 0; i < get_size(L); i++)
-      pushFronT(L, dato);
+      pushFront(L, dato);
       suma += *dato;
       dato = (int*)next(L);
   return suma;
