@@ -258,3 +258,21 @@ Wed 20 Mar 2024 09:04:28 PM UTC:
  tests:  4|1
 total_score: 50/70
 fa09531
+Wed 20 Mar 2024 09:05:46 PM UTC: 
+ exercises.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:97:3: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   97 |   while((dato = pop(P1)) != NULL)
+      |   ^~~~~
+exercises.c:99:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+   99 |     push(P2, dato);
+      |     ^~~~
+exercises.c: At top level:
+exercises.c:105:1: error: expected identifier or ‘(’ before ‘}’ token
+  105 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+7e13b4e
