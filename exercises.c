@@ -63,7 +63,7 @@ int sumaLista(List *L) {
   while(dato != NULL)
     for(int i = 0; i < get_size(L); i++){
       pushFront(L, dato);
-      suma += *dato;
+      suma += dato;
       dato = (int*)next(L);
     }
   return suma;
@@ -87,8 +87,6 @@ void eliminaElementos(List*L, int elem){
         popCurrent(L);
       dato = (int*)next(L);
     }
-      
-
 }
 
 /*
