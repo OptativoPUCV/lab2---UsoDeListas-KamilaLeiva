@@ -61,10 +61,11 @@ int sumaLista(List *L) {
   int* dato;
   dato = (int*)first(L);
   while(dato != NULL)
-    for(int i = 0; i < get_size(L); i++)
+    for(int i = 0; i < get_size(L); i++){
       pushFront(L, dato);
       suma += *dato;
       dato = (int*)next(L);
+    }
   return suma;
 }
 
