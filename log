@@ -124,3 +124,13 @@ exercises.c:66:12: error: assignment to ‘int’ from ‘int *’ makes integer
 cc1: all warnings being treated as errors
 Compilation failed
 6786fbb
+Wed 20 Mar 2024 08:38:23 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+0293568
+Wed 20 Mar 2024 08:40:03 PM UTC: 
+ exercises.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+ tests:  0|0
+0293568
