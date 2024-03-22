@@ -282,3 +282,60 @@ Wed 20 Mar 2024 09:06:17 PM UTC:
  tests:  4|1
 total_score: 50/70
 bbb5a13
+Fri 22 Mar 2024 08:49:54 PM UTC: 
+ exercises.c | 31 ++++++++++++++++++++++++++++++-
+ 1 file changed, 30 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:113:17: error: implicit declaration of function ‘createStack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  113 |   Stack* pila = createStack();
+      |                 ^~~~~~~~~~~
+      |                 create_stack
+exercises.c:113:17: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:114:26: error: passing argument 1 of ‘first’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  114 |   char* elemento = first(cadena);
+      |                          ^~~~~~
+      |                          |
+      |                          char *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char *’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+In file included from test.c:5:
+exercises.c:118:17: error: comparison between pointer and integer [-Werror]
+  118 |     if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
+      |                 ^~
+exercises.c:118:36: error: comparison between pointer and integer [-Werror]
+  118 |     if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
+      |                                    ^~
+exercises.c:118:55: error: comparison between pointer and integer [-Werror]
+  118 |     if(elemento == '(' || elemento == '[' || elemento == '{') push(pila, elemento);
+      |                                                       ^~
+exercises.c:122:10: error: implicit declaration of function ‘isEmpty’ [-Werror=implicit-function-declaration]
+  122 |       if(isEmpty(pila)) return 0;
+      |          ^~~~~~~
+exercises.c:126:21: error: comparison between pointer and integer [-Werror]
+  126 |         if(elemento == ')' && elemento_pila == '(') pop(pila);
+      |                     ^~
+exercises.c:126:45: error: comparison between pointer and integer [-Werror]
+  126 |         if(elemento == ')' && elemento_pila == '(') pop(pila);
+      |                                             ^~
+exercises.c:130:23: error: comparison between pointer and integer [-Werror]
+  130 |           if(elemento == ']' && elemento_pila == '[') pop(pila);
+      |                       ^~
+exercises.c:130:47: error: comparison between pointer and integer [-Werror]
+  130 |           if(elemento == ']' && elemento_pila == '[') pop(pila);
+      |                                               ^~
+exercises.c:134:25: error: comparison between pointer and integer [-Werror]
+  134 |             if(elemento == '}' && elemento_pila == '{') pop(pila);
+      |                         ^~
+exercises.c:134:49: error: comparison between pointer and integer [-Werror]
+  134 |             if(elemento == '}' && elemento_pila == '{') pop(pila);
+      |                                                 ^~
+exercises.c:144:1: error: control reaches end of non-void function [-Werror=return-type]
+  144 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3a1321e
