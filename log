@@ -588,3 +588,9 @@ exercises.c:132:31: error: invalid type argument of unary ‘*’ (have ‘int�
 cc1: all warnings being treated as errors
 Compilation failed
 291b89f
+Sun 24 Mar 2024 02:45:34 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|0
+total_score: 70/70
+e96c8b6
