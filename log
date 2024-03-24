@@ -485,3 +485,51 @@ exercises.c:123:27: error: cast from pointer to integer of different size [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 c28564d
+Sun 24 Mar 2024 02:40:32 AM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:118:18: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  118 |       push(pila, *c);
+      |                  ^~
+      |                  |
+      |                  char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:120:10: error: implicit declaration of function ‘isEmpty’ [-Werror=implicit-function-declaration]
+  120 |       if(isEmpty(pila))
+      |          ^~~~~~~
+exercises.c:123:19: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  123 |         char c2 = (char)top(pila);
+      |                   ^
+exercises.c: At top level:
+exercises.c:140:5: error: expected identifier or ‘(’ before ‘}’ token
+  140 |     }      c++;
+      |     ^
+exercises.c:140:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘++’ token
+  140 |     }      c++;
+      |             ^~
+exercises.c:141:3: error: expected identifier or ‘(’ before ‘}’ token
+  141 |   }
+      |   ^
+exercises.c:142:27: error: ‘pila’ undeclared here (not in a function)
+  142 |   int resultado = isEmpty(pila);
+      |                           ^~~~
+exercises.c:143:3: error: expected identifier or ‘(’ before ‘return’
+  143 |   return resultado;
+      |   ^~~~~~
+exercises.c:144:1: error: expected identifier or ‘(’ before ‘}’ token
+  144 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:139:7: error: control reaches end of non-void function [-Werror=return-type]
+  139 |       }
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+bc87776
