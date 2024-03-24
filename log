@@ -533,3 +533,26 @@ exercises.c:139:7: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 bc87776
+Sun 24 Mar 2024 02:41:34 AM UTC: 
+ exercises.c | 44 +++++++++++++++++++++-----------------------
+ 1 file changed, 21 insertions(+), 23 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:122:12: error: implicit declaration of function ‘isEmpty’ [-Werror=implicit-function-declaration]
+  122 |         if(isEmpty(P)) return 0;
+      |            ^~~~~~~
+exercises.c:125:21: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  125 |           char c2 = (char)top(P);
+      |                     ^
+exercises.c:126:27: error: invalid type argument of unary ‘*’ (have ‘int’)
+  126 |           if(*c == ')' && *c2 == '(') pop(P);
+      |                           ^~~
+exercises.c:129:29: error: invalid type argument of unary ‘*’ (have ‘int’)
+  129 |             if(*c == ']' && *c2 == '[') pop(P);
+      |                             ^~~
+exercises.c:132:31: error: invalid type argument of unary ‘*’ (have ‘int’)
+  132 |               if(*c == '}' && *c2 == '{') pop(P);
+      |                               ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+766f33a
