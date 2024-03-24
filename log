@@ -556,3 +556,15 @@ exercises.c:132:31: error: invalid type argument of unary ‘*’ (have ‘int�
 cc1: all warnings being treated as errors
 Compilation failed
 766f33a
+Sun 24 Mar 2024 02:44:40 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:125:22: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  125 |           char *c2 = (char)top(P);
+      |                      ^
+exercises.c:125:22: error: initialization of ‘char *’ from ‘char’ makes pointer from integer without a cast [-Werror=int-conversion]
+cc1: all warnings being treated as errors
+Compilation failed
+0ad1d86
