@@ -376,3 +376,37 @@ exercises.c:126:3: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 01f2f92
+Sun 24 Mar 2024 02:35:36 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:116:19: error: comparison between pointer and integer [-Werror]
+  116 |   while(*elemento != NULL){
+      |                   ^~
+exercises.c:120:20: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  120 |       char elem2 = pop(pila);
+      |                    ^~~
+exercises.c:121:19: error: comparison between pointer and integer [-Werror]
+  121 |       if(elemento == ')' && elem2 != '(')
+      |                   ^~
+exercises.c: At top level:
+exercises.c:127:19: error: implicit declaration of function ‘isEmpty’ [-Werror=implicit-function-declaration]
+  127 |   int resultado = isEmpty(pila);
+      |                   ^~~~~~~
+exercises.c:127:27: error: ‘pila’ undeclared here (not in a function)
+  127 |   int resultado = isEmpty(pila);
+      |                           ^~~~
+exercises.c:128:3: error: expected identifier or ‘(’ before ‘return’
+  128 |   return 0;
+      |   ^~~~~~
+exercises.c:129:1: error: expected identifier or ‘(’ before ‘}’ token
+  129 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:3: error: control reaches end of non-void function [-Werror=return-type]
+  126 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+cd437d0
